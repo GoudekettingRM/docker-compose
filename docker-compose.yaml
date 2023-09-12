@@ -19,6 +19,6 @@ services:
     container_name: toast
     image: nginx:latest
     ports:
-      - '1080:80'
-      - '1443:443'
+      - '2080:80'
+      - '2443:443'
     restart: always
