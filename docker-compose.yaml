@@ -5,4 +5,20 @@ services:
     ports:
       - '80:80'
       - '443:443'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: always
+  test:
+    name: test
+    image: nginx:latest
+    ports:
+      - '1080:80'
+      - '1443:443'
+    restart: always
+  toast:
+    name: test
+    image: nginx:latest
+    ports:
+      - '1080:80'
+      - '1443:443'
     restart: always
